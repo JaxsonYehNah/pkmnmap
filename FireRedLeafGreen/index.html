@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Pokémon FireRed & LeafGreen Interactive Map</title>
+    <meta name="description" content="An Interactive Map for Pokémon FireRed & LeafGreen, featuring Item Locations">
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="Content/Leaflet/leaflet.css" />
+    <link rel="stylesheet" href="Content/CSS/main.css" />
+</head>
+
+<body>
+    <div id="container">
+        <div id="map"></div>
+        <div id="controlscon">
+            <!-- Controls -->
+            <img id="menu-access" src="Content/Images/menu_icon.svg" alt="Popout Menu" onclick="changeMenu()">
+            <div id="controls">
+                <button onclick="disableItems()">Items</button>
+                <button onclick="disableHiddenItems()">Hidden Items</button>
+                <button onclick="toggleGrid()">toggle Grid</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Map Scripts -->
+    <div>
+        <script src="Content/Leaflet/leaflet.js"></script>
+        <script src="Content/Scripts/main.js"></script>
+        <script src="Content/Scripts/Markers/FieryPathVector.js"></script>
+        <script src="Content/Scripts/Markers/GraniteCaveVector.js"></script>
+        <script src="Content/Scripts/Markers/JaggedPassVector.js"></script>
+        <script src="Content/Scripts/Markers/MeteorFallsVector.js"></script>
+        <script src="Content/Scripts/Markers/MtChimneyVector.js"></script>
+        <script src="Content/Scripts/Markers/MagmaHideoutVector.js"></script>
+        <script src="Content/Scripts/Markers/MtPyreVector.js"></script>
+        <script src="Content/Scripts/Markers/OverworldVector.js"></script>
+        <script src="Content/Scripts/Markers/PetalburgWoodsVector.js"></script>
+        <script src="Content/Scripts/Markers/RusturfTunnelVector.js"></script>
+        <script src="Content/Scripts/Markers/SootopolisVector.js"></script>
+        <script src="Content/Scripts/Markers/VictoryRoadVector.js"></script>
+        <script src="Content/Scripts/markers.js"></script>
+        <script src="Content/Scripts/Markers/Overworld.js"></script>
+        <script src="Content/Scripts/Markers/PetalburgWoods.js"></script>
+        <script src="Content/Scripts/Markers/VictoryRoad.js"></script>
+        <script src="Content/Scripts/Markers/RusturfTunnel.js"></script>
+        <script src="Content/Scripts/Markers/GraniteCave.js"></script>
+        <script src="Content/Scripts/Markers/FieryPath.js"></script>
+        <script src="Content/Scripts/Markers/JaggedPass.js"></script>
+        <script src="Content/Scripts/Markers/MtChimney.js"></script>
+        <script src="Content/Scripts/Markers/MagmaHideout.js"></script>
+        <script src="Content/Scripts/Markers/MeteorFalls.js"></script>
+        <script src="Content/Scripts/Markers/MtPyre.js"></script>
+        <script src="Content/Scripts/Markers/Sootopolis.js"></script>
+        <script src="Content/Scripts/functions.js"></script>
+    </div>
+</body>
+
+<!-- Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-217428501-1"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+        dataLayer.push(arguments);
+    }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-217428501-1');
+</script>
+
+</html>
