@@ -1,7 +1,7 @@
 var RusturfTunnel = L.tileLayer('Tilesets/RusturfTunnel/{z}/{x}/{y}.png', {
     tms: false,
     reuseTiles: true,
-    attribution: 'Maker: <a target="_blank" href="http://www.jaxsonkeenes.com">Jaxson Keenes</a> - Contact: <a target="_blank" href="mailto:admin@oceanicweb.com.au">email</a>',
+    attribution: 'Maker: <a target="_blank" href="http://www.jaxsonkeenes.com">Jaxson Keenes</a> - Contact: <a target="_blank" href="mailto:jaxsonkeenes@gmail.com">email</a>',
     bounds: bounds,
     tileSize: 256
 });

@@ -113,7 +113,7 @@ body,
 
 #pkmn-list {
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto;
     grid-gap: 1px;
     background-color: black;
     border: 1px solid black;
@@ -167,4 +167,30 @@ body,
 
 .pkmn-list-column-game div:first-of-type {
     border-right: 1px solid black;
+}
+
+.pkmn-list-column img {
+    width: 30px;
+    height: 30px;
+}
+
+@media only screen and (max-height: 900px) {
+    .pkmn-list-column img {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media only screen and (max-height: 720px) {
+    .pkmn-list-column img {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media only screen and (max-height: 650px) {
+    .pkmn-list-column img {
+        width: 12px;
+        height: 12px;
+    }
 }

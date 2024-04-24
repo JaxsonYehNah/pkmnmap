@@ -33,7 +33,7 @@ var LocationArray = [];
 var Grid = L.tileLayer('Tilesets/Grid/{z}/{x}/{y}.png', {
     tms: false,
     reuseTiles: true,
-    attribution: 'Maker: <a target="_blank" href="http://www.jaxsonkeenes.com">Jaxson Keenes</a> - Contact: <a target="_blank" href="mailto:admin@oceanicweb.com.au">email</a>',
+    attribution: 'Maker: <a target="_blank" href="http://www.jaxsonkeenes.com">Jaxson Keenes</a> - Contact: <a target="_blank" href="mailto:jaxsonkeenes@gmail.com">email</a>',
     bounds: bounds,
     tileSize: 256
 });
@@ -47,6 +47,8 @@ info.onAdd = function(map) {
     this.update();
     return this._div;
 };
+
+// Not sure why this is here
 
 function pkmnListOutput(str, arr, title, perc) {
     if (arr.length != 0) {
@@ -63,6 +65,8 @@ function pkmnListOutput(str, arr, title, perc) {
     return str;
 }
 
+// Outputs list for selected route
+
 function outpkmn(props) {
     var arr = props.Pokémon;
     var nodata = false;
@@ -74,6 +78,8 @@ function outpkmn(props) {
 
     str = str +
         '<div class="pkmn-list-column">' +
+        'Icon' +
+        '</div><div class="pkmn-list-column">' +
         'Name' +
         '</div><div class="pkmn-list-column">' +
         'Games' +
@@ -109,6 +115,7 @@ function outpkmn(props) {
                 lg = 'leafgreen';
             }
             str = str + '' +
+                '<div class="pkmn-list-column"><img src=\"../Sprites/' + pk[i].name + '.png\"></div>' +
                 '<div class="pkmn-list-column">' + pk[i].name + '</div>' +
                 '<div class="pkmn-list-column-game"><div class="' + fr + '"><p>FR</p></div><div class="' + lg + '"><p>LG</p></div></div>' +
                 '<div class="pkmn-list-column">' + pk[i].area + '</div>' +
