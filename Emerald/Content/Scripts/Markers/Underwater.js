@@ -13,6 +13,8 @@ var UnderwaterInfo = L.geoJson(UnderwaterVectorData, {
 
 var UnderwaterItemLayer = L.layerGroup();
 var UnderwaterHiddenItemLayer = L.layerGroup();
+var UnderwaterBerryItemLayer = L.layerGroup();
+var UnderwaterTMItemLayer = L.layerGroup();
 var UnderwaterEntranceItemLayer = L.layerGroup();
 
 var currentMap = "Underwater";
@@ -29,6 +31,7 @@ function toggleUnderwater() {
         OverworldItemLayer.addTo(map);
         OverworldHiddenItemLayer.addTo(map);
         OverworldBerryItemLayer.addTo(map);
+        OverworldTMItemLayer.addTo(map);
         OverworldEntranceItemLayer.addTo(map);
         console.log("Underwater removed");
     } else {
@@ -42,6 +45,7 @@ function toggleUnderwater() {
             UnderwaterInfo.addTo(map);
             UnderwaterItemLayer.addTo(map);
             UnderwaterHiddenItemLayer.addTo(map);
+            UnderwaterTMItemLayer.addTo(map);
             UnderwaterEntranceItemLayer.addTo(map);
             console.log("Underwater added");
         }

@@ -13,6 +13,8 @@ var GraniteCaveInfo = L.geoJson(GraniteCaveVectorData, {
 
 var GraniteCaveItemLayer = L.layerGroup();
 var GraniteCaveHiddenItemLayer = L.layerGroup();
+var GraniteCaveBerryItemLayer = L.layerGroup();
+var GraniteCaveTMItemLayer = L.layerGroup();
 var GraniteCaveEntranceItemLayer = L.layerGroup();
 
 function GraniteCavef(e) {
@@ -28,6 +30,7 @@ function GraniteCavef(e) {
     GraniteCaveInfo.addTo(map);
     GraniteCaveItemLayer.addTo(map);
     GraniteCaveHiddenItemLayer.addTo(map);
+    GraniteCaveTMItemLayer.addTo(map);
     GraniteCaveEntranceItemLayer.addTo(map);
 
     currentMap = "Granite Cave";

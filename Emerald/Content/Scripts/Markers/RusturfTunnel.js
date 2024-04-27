@@ -13,6 +13,8 @@ var RusturfTunnelInfo = L.geoJson(RusturfTunnelVectorData, {
 
 var RusturfTunnelItemLayer = L.layerGroup();
 var RusturfTunnelHiddenItemLayer = L.layerGroup();
+var RusturfTunnelBerryItemLayer = L.layerGroup();
+var RusturfTunnelTMItemLayer = L.layerGroup();
 var RusturfTunnelEntranceItemLayer = L.layerGroup();
 
 var currentMap = "Rusturf Tunnel";
@@ -31,6 +33,7 @@ function RusturfTunnelf(e) {
     RusturfTunnelInfo.addTo(map);
     RusturfTunnelItemLayer.addTo(map);
     RusturfTunnelHiddenItemLayer.addTo(map);
+    RusturfTunnelTMItemLayer.addTo(map);
     RusturfTunnelEntranceItemLayer.addTo(map);
     currentMap = "Rusturf Tunnel";
 

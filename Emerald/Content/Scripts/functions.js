@@ -27,6 +27,13 @@ function disableBerryItems() {
     }
 }
 
+function disableTMItems() {
+    var elements = document.getElementsByClassName('tmitemIcon');
+    for (var i = 0, length = elements.length; i < length; i++) {
+        elements[i].classList.toggle("hidden");
+    }
+}
+
 function toggleGrid() {
     if (map.hasLayer(Grid)) {
         map.removeLayer(Grid);

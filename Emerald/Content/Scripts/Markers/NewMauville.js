@@ -13,6 +13,8 @@ var NewMauvilleInfo = L.geoJson(NewMauvilleVectorData, {
 
 var NewMauvilleItemLayer = L.layerGroup();
 var NewMauvilleHiddenItemLayer = L.layerGroup();
+var NewMauvilleBerryItemLayer = L.layerGroup();
+var NewMauvilleTMItemLayer = L.layerGroup();
 var NewMauvilleEntranceItemLayer = L.layerGroup();
 
 var currentMap = "New Mauville";
@@ -31,6 +33,7 @@ function NewMauvillef(e) {
     NewMauvilleInfo.addTo(map);
     NewMauvilleItemLayer.addTo(map);
     NewMauvilleHiddenItemLayer.addTo(map);
+    NewMauvilleTMItemLayer.addTo(map);
     NewMauvilleEntranceItemLayer.addTo(map);
 
     currentMap = "New Mauville";

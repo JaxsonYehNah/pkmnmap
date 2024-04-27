@@ -13,6 +13,8 @@ var NewMauvilleEntranceInfo = L.geoJson(NewMauvilleEntranceVectorData, {
 
 var NewMauvilleEntranceItemLayer = L.layerGroup();
 var NewMauvilleEntranceHiddenItemLayer = L.layerGroup();
+var NewMauvilleBerryItemLayer = L.layerGroup();
+var NewMauvilleTMItemLayer = L.layerGroup();
 var NewMauvilleEntranceEntranceItemLayer = L.layerGroup();
 
 var currentMap = "New Mauville Entrance";
@@ -31,6 +33,7 @@ function NewMauvilleEntrancef(e) {
     NewMauvilleEntranceInfo.addTo(map);
     NewMauvilleEntranceItemLayer.addTo(map);
     NewMauvilleEntranceHiddenItemLayer.addTo(map);
+    NewMauvilleEntranceTMItemLayer.addTo(map);
     NewMauvilleEntranceEntranceItemLayer.addTo(map);
 
     currentMap = "New Mauville Entrance";
@@ -50,9 +53,3 @@ function NewMauvilleEntrancef(e) {
 markerSet(-238, 414, "Overworld", entrance, currentMap);
 markerSet(-238, 415, "Overworld", entrance, currentMap);
 markerSet(-238, 415, "New Mauville", entrance, currentMap);
-
-
-markerSet(-210, 375, "Max Ether", hitemIcon, currentMap);
-markerSet(-196, 368, "Ultra Ball", hitemIcon, currentMap);
-markerSet(-175, 364, "Zinc", hitemIcon, currentMap);
-markerSet(-157, 392, "Rare Candy", hitemIcon, currentMap);

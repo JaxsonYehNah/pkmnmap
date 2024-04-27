@@ -13,6 +13,8 @@ var SafariZoneInfo = L.geoJson(SafariZoneVectorData, {
 
 var SafariZoneItemLayer = L.layerGroup();
 var SafariZoneHiddenItemLayer = L.layerGroup();
+var SafariZoneBerryItemLayer = L.layerGroup();
+var SafariZoneTMItemLayer = L.layerGroup();
 var SafariZoneEntranceItemLayer = L.layerGroup();
 
 var currentMap = "Safari Zone";
@@ -31,6 +33,7 @@ function SafariZonef(e) {
     SafariZoneInfo.addTo(map);
     SafariZoneItemLayer.addTo(map);
     SafariZoneHiddenItemLayer.addTo(map);
+    SafariZoneTMItemLayer.addTo(map);
     SafariZoneEntranceItemLayer.addTo(map);
     currentMap = "Safari Zone";
 
@@ -62,7 +65,7 @@ markerSet(-207, 451, "Big Pearl", itemIcon, currentMap);
 markerSet(-158, 387, "Calcium", itemIcon, currentMap);
 
 //Zone 3
-markerSet(-159, 373, "TM22 (SolarBeam)", itemIcon, currentMap);
+markerSet(-159, 373, "TM22 (SolarBeam)", tmitemIcon, currentMap);
 
 //Zone 2
 markerSet(-229, 340, "Protein", hitemIcon, currentMap);

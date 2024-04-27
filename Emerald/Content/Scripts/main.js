@@ -48,6 +48,8 @@ info.onAdd = function(map) {
     return this._div;
 };
 
+
+
 // Not sure why this is here
 
 function pkmnListOutput(str, arr, title, perc) {
@@ -148,7 +150,6 @@ function style(feature) {
 }
 
 function updateFeature(e) {
-
     OverworldInfo.resetStyle(oldtarget); //not sure how tf this works with other Vector layers, but it does
     info.update();
 

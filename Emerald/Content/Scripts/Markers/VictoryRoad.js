@@ -13,6 +13,8 @@ var VictoryRoadInfo = L.geoJson(VictoryRoadVectorData, {
 
 var VictoryRoadItemLayer = L.layerGroup();
 var VictoryRoadHiddenItemLayer = L.layerGroup();
+var VictoryRoadBerryItemLayer = L.layerGroup();
+var VictoryRoadTMItemLayer = L.layerGroup();
 var VictoryRoadEntranceItemLayer = L.layerGroup();
 
 var currentMap = "Victory Road";
@@ -31,6 +33,7 @@ function VictoryRoadf(e) {
     VictoryRoadInfo.addTo(map);
     VictoryRoadItemLayer.addTo(map);
     VictoryRoadHiddenItemLayer.addTo(map);
+    VictoryRoadTMItemLayer.addTo(map);
     VictoryRoadEntranceItemLayer.addTo(map);
     currentMap = "Victory Road";
 
@@ -53,7 +56,7 @@ markerSet(-178, 392, "Overworld", entrance, currentMap);
 markerSet(-163, 417, "Max Elixir", itemIcon, currentMap);
 markerSet(-176, 414, "PP UP", itemIcon, currentMap);
 markerSet(-186, 409, "Full Restore", itemIcon, currentMap);
-markerSet(-191, 419, "TM29", itemIcon, currentMap);
+markerSet(-191, 419, "TM29 (Psychic)", tmitemIcon, currentMap);
 markerSet(-223, 390, "Full Heal", itemIcon, currentMap);
 
 markerSet(-220, 405, "Elixir", hitemIcon, currentMap);

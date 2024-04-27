@@ -13,6 +13,8 @@ var SootopolisInfo = L.geoJson(SootopolisVectorData, {
 
 var SootopolisItemLayer = L.layerGroup();
 var SootopolisHiddenItemLayer = L.layerGroup();
+var SootopolisBerryItemLayer = L.layerGroup();
+var SootopolisTMItemLayer = L.layerGroup();
 var SootopolisEntranceItemLayer = L.layerGroup();
 
 var currentMap = "Sootopolis";
@@ -31,6 +33,7 @@ function Sootopolisf(e) {
     SootopolisInfo.addTo(map);
     SootopolisItemLayer.addTo(map);
     SootopolisHiddenItemLayer.addTo(map);
+    SootopolisTMItemLayer.addTo(map);
     SootopolisEntranceItemLayer.addTo(map);
     currentMap = "Sootopolis";
 

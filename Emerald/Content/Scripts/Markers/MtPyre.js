@@ -13,6 +13,8 @@ var MtPyreInfo = L.geoJson(MtPyreVectorData, {
 
 var MtPyreItemLayer = L.layerGroup();
 var MtPyreHiddenItemLayer = L.layerGroup();
+var MtPyreBerryItemLayer = L.layerGroup();
+var MtPyreTMItemLayer = L.layerGroup();
 var MtPyreEntranceItemLayer = L.layerGroup();
 
 var currentMap = "Mt Pyre";
@@ -31,6 +33,7 @@ function MtPyref(e) {
     MtPyreInfo.addTo(map);
     MtPyreItemLayer.addTo(map);
     MtPyreHiddenItemLayer.addTo(map);
+    MtPyreTMItemLayer.addTo(map);
     MtPyreEntranceItemLayer.addTo(map);
 
     currentMap = "Mt Pyre";

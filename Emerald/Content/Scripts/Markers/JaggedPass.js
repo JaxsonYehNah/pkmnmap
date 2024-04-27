@@ -13,6 +13,8 @@ var JaggedPassInfo = L.geoJson(JaggedPassVectorData, {
 
 var JaggedPassItemLayer = L.layerGroup();
 var JaggedPassHiddenItemLayer = L.layerGroup();
+var JaggedPassBerryItemLayer = L.layerGroup();
+var JaggedPassTMItemLayer = L.layerGroup();
 var JaggedPassEntranceItemLayer = L.layerGroup();
 
 var currentMap = "Jagged Pass";
@@ -30,6 +32,7 @@ function JaggedPassf(e) {
     JaggedPassInfo.addTo(map);
     JaggedPassItemLayer.addTo(map);
     JaggedPassHiddenItemLayer.addTo(map);
+    JaggedPassTMItemLayer.addTo(map);
     JaggedPassEntranceItemLayer.addTo(map);
 
     currentMap = "Jagged Pass";

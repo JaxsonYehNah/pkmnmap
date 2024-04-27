@@ -13,6 +13,8 @@ var MagmaHideoutInfo = L.geoJson(MagmaHideoutVectorData, {
 
 var MagmaHideoutItemLayer = L.layerGroup();
 var MagmaHideoutHiddenItemLayer = L.layerGroup();
+var MagmaHideoutBerryItemLayer = L.layerGroup();
+var MagmaHideoutTMItemLayer = L.layerGroup();
 var MagmaHideoutEntranceItemLayer = L.layerGroup();
 
 var currentMap = "Magma Hideout";
@@ -31,6 +33,7 @@ function MagmaHideoutf(e) {
     MagmaHideoutInfo.addTo(map);
     MagmaHideoutItemLayer.addTo(map);
     MagmaHideoutHiddenItemLayer.addTo(map);
+    MagmaHideoutTMItemLayer.addTo(map);
     MagmaHideoutEntranceItemLayer.addTo(map);
 
     currentMap = "Magma Hideout";

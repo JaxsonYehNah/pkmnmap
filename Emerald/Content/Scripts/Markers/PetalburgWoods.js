@@ -13,6 +13,8 @@ var PetalburgWoodsInfo = L.geoJson(PetalburgWoodsVectorData, {
 
 var PetalburgWoodsItemLayer = L.layerGroup();
 var PetalburgWoodsHiddenItemLayer = L.layerGroup();
+var PetalburgWoodsBerryItemLayer = L.layerGroup();
+var PetalburgWoodsTMItemLayer = L.layerGroup();
 var PetalburgWoodsEntranceItemLayer = L.layerGroup();
 
 var currentMap = "Petalburg Woods";
@@ -30,6 +32,7 @@ function PetalburgWoodsf(e) {
     PetalburgWoodsInfo.addTo(map);
     PetalburgWoodsItemLayer.addTo(map);
     PetalburgWoodsHiddenItemLayer.addTo(map);
+    PetalburgWoodsTMItemLayer.addTo(map);
     PetalburgWoodsEntranceItemLayer.addTo(map);
     currentMap = "Petalburg Woods";
 

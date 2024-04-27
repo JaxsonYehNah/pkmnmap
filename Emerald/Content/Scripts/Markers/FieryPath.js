@@ -13,6 +13,8 @@ var FieryPathInfo = L.geoJson(FieryPathVectorData, {
 
 var FieryPathItemLayer = L.layerGroup();
 var FieryPathHiddenItemLayer = L.layerGroup();
+var FieryPathBerryItemLayer = L.layerGroup();
+var FieryPathTMItemLayer = L.layerGroup();
 var FieryPathEntranceItemLayer = L.layerGroup();
 
 function FieryPathf(e) {
@@ -28,6 +30,7 @@ function FieryPathf(e) {
     FieryPathInfo.addTo(map);
     FieryPathItemLayer.addTo(map);
     FieryPathHiddenItemLayer.addTo(map);
+    FieryPathTMItemLayer.addTo(map);
     FieryPathEntranceItemLayer.addTo(map);
 
     currentMap = "Fiery Path";
@@ -49,4 +52,4 @@ markerSet(-178, 409, "Overworld", entrance, currentMap);
 markerSet(-210, 409, "Overworld", entrance, currentMap);
 
 markerSet(-205, 390, "Fire Stone", itemIcon, currentMap);
-markerSet(-176, 391, "TM06 (Toxic)", itemIcon, currentMap);
+markerSet(-176, 391, "TM06 (Toxic)", tmitemIcon, currentMap);

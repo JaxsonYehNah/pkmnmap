@@ -13,6 +13,8 @@ var MeteorFallsInfo = L.geoJson(MeteorFallsVectorData, {
 
 var MeteorFallsItemLayer = L.layerGroup();
 var MeteorFallsHiddenItemLayer = L.layerGroup();
+var MeteorFallsBerryItemLayer = L.layerGroup();
+var MeteorFallsTMItemLayer = L.layerGroup();
 var MeteorFallsEntranceItemLayer = L.layerGroup();
 
 var currentMap = "Meteor Falls";
@@ -30,6 +32,7 @@ function MeteorFallsf(e) {
     MeteorFallsInfo.addTo(map);
     MeteorFallsItemLayer.addTo(map);
     MeteorFallsHiddenItemLayer.addTo(map);
+    MeteorFallsTMItemLayer.addTo(map);
     MeteorFallsEntranceItemLayer.addTo(map);
 
     currentMap = "Meteor Falls";
@@ -51,6 +54,6 @@ markerSet(-211, 375, "Overworld", entrance, currentMap);
 
 markerSet(-176, 396, "Full Heal", itemIcon, currentMap);
 markerSet(-185, 371, "Moon Stone", itemIcon, currentMap);
-markerSet(-175, 371, "TM23 (Iron Tail)", itemIcon, currentMap);
+markerSet(-175, 371, "TM23 (Iron Tail)", tmitemIcon, currentMap);
 markerSet(-203, 395, "PP UP", itemIcon, currentMap);
-markerSet(-143, 417, "TM02 (Dragon Claw)", itemIcon, currentMap);
+markerSet(-143, 417, "TM02 (Dragon Claw)", tmitemIcon, currentMap);

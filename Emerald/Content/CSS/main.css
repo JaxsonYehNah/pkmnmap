@@ -74,11 +74,29 @@ body,
     transition: all 0.1s;
 }
 
+.tmitemIcon {
+    width: 20px;
+    height: 20px;
+    margin: -10px;
+    background-image: url("../Images/tmitem.png");
+    background-size: 100% 100%;
+    transition: all 0.1s;
+}
+
 .entrance {
     width: 20px;
     height: 20px;
     margin: -10px;
     background-image: url("../Images/entrance.png");
+    background-size: 100% 100%;
+    transition: all 0.1s;
+}
+
+.trainer {
+    width: 20px;
+    height: 20px;
+    margin: -10px;
+    background-image: url("../Images/trainer.webp");
     background-size: 100% 100%;
     transition: all 0.1s;
 }

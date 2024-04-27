@@ -13,6 +13,8 @@ var MtChimneyInfo = L.geoJson(MtChimneyVectorData, {
 
 var MtChimneyItemLayer = L.layerGroup();
 var MtChimneyHiddenItemLayer = L.layerGroup();
+var MtChimneyBerryItemLayer = L.layerGroup();
+var MtChimneyTMItemLayer = L.layerGroup();
 var MtChimneyEntranceItemLayer = L.layerGroup();
 
 var currentMap = "Mt Chimney";
@@ -30,6 +32,7 @@ function MtChimneyf(e) {
     MtChimneyInfo.addTo(map);
     MtChimneyItemLayer.addTo(map);
     MtChimneyHiddenItemLayer.addTo(map);
+    MtChimneyTMItemLayer.addTo(map);
     MtChimneyEntranceItemLayer.addTo(map);
 
     currentMap = "Mt Chimney";
