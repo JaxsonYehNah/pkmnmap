@@ -1,4 +1,4 @@
-var VictoryRoadVectorData = {
+var VictoryRoadVector = {
     "type": "FeatureCollection",
     "features": [{
             "type": "Feature",

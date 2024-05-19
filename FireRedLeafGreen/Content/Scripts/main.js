@@ -55,6 +55,7 @@ function pkmnListOutput(str, arr, title, perc) {
         str = str + '<div class="pkmn-list-row">' + title + '</div>';
         for (var i = 0; i < arr.length; i++) {
             str = str + '' +
+                '<div class="pkmn-list-column"><img src=\"../Sprites/' + pk[i].name + '.png\"></div>' +
                 '<div class="pkmn-list-column">' + arr[i].name + '</div>' +
                 '<div class="pkmn-list-column">' + arr[i].FireRed + '</div>' +
                 '<div class="pkmn-list-column">' + arr[i].area + '</div>' +

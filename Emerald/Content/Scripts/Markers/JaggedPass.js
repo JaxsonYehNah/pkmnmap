@@ -1,60 +1,13 @@
-var JaggedPass = L.tileLayer('Tilesets/JaggedPass/{z}/{x}/{y}.png', {
-    tms: false,
-    reuseTiles: true,
-    attribution: 'Maker: <a target="_blank" href="http://www.jaxsonkeenes.com">Jaxson Keenes</a> - Contact: <a target="_blank" href="mailto:jaxsonkeenes@gmail.com">email</a>',
-    bounds: bounds,
-    tileSize: 256
-});
-
-var JaggedPassInfo = L.geoJson(JaggedPassVectorData, {
-    style: style,
-    onEachFeature: onEachFeature
-});
-
-var JaggedPassItemLayer = L.layerGroup();
-var JaggedPassHiddenItemLayer = L.layerGroup();
-var JaggedPassBerryItemLayer = L.layerGroup();
-var JaggedPassTMItemLayer = L.layerGroup();
-var JaggedPassEntranceItemLayer = L.layerGroup();
-
 var currentMap = "Jagged Pass";
 
-function JaggedPassf(e) {
+markerSet(-208, 399, "Overworld", entranceIcon, currentMap);
+markerSet(-208, 400, "Overworld", entranceIcon, currentMap);
 
-    map.eachLayer(function(layer) {
-        map.removeLayer(layer);
-    });
+markerSet(-172, 398, "Mt Chimney", entranceIcon, currentMap);
+markerSet(-172, 399, "Mt Chimney", entranceIcon, currentMap);
 
-    info.update();
-    map.setView([-48, 100], 6);
+markerSet(-186, 401, "Magma Hideout", entranceIcon, currentMap);
 
-    JaggedPass.addTo(map);
-    JaggedPassInfo.addTo(map);
-    JaggedPassItemLayer.addTo(map);
-    JaggedPassHiddenItemLayer.addTo(map);
-    JaggedPassTMItemLayer.addTo(map);
-    JaggedPassEntranceItemLayer.addTo(map);
-
-    currentMap = "Jagged Pass";
-
-    console.log(e.target.name);
-    map.options.minZoom = 6;
-
-    var dif = 15;
-
-    var swview = [(-48 - dif), (100 - dif)];
-    var neview = [(-48 + dif), (100 + dif)];
-
-    map.options.maxBounds = L.latLngBounds(swview, neview);
-}
-
-markerSet(-208, 399, "Overworld", entrance, currentMap);
-markerSet(-208, 400, "Overworld", entrance, currentMap);
-
-markerSet(-172, 398, "Mt Chimney", entrance, currentMap);
-markerSet(-172, 399, "Mt Chimney", entrance, currentMap);
-
-markerSet(-186, 401, "Magma Hideout", entrance, currentMap);
-
-markerSet(-178, 393, "Full Heal", hitemIcon, currentMap);
-markerSet(-197, 392, "Great Ball", hitemIcon, currentMap);
+markerSet(-178, 393, "Full Heal", hiddenIcon, currentMap);
+markerSet(-197, 392, "Great Ball", hiddenIcon, currentMap);
+markerSet(-192, 408, "Burn Heal", itemIcon, currentMap);

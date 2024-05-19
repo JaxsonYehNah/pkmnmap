@@ -1,4 +1,4 @@
-var SootopolisVectorData = {
+var SootopolisVector = {
     "type": "FeatureCollection",
     "features": [{
         "type": "Feature",

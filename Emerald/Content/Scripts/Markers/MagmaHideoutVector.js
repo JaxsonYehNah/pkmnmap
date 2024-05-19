@@ -1,4 +1,4 @@
-var MagmaHideoutVectorData = {
+var MagmaHideoutVector = {
     "type": "FeatureCollection",
     "features": [{
             "type": "Feature",

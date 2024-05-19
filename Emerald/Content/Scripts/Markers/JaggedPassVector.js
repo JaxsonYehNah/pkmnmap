@@ -1,4 +1,4 @@
-var JaggedPassVectorData = {
+var JaggedPassVector = {
     "type": "FeatureCollection",
     "features": [{
         "type": "Feature",

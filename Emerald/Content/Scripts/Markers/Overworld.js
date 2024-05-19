@@ -1,129 +1,42 @@
 // Map
 
-var Overworld = L.tileLayer('Tilesets/OverworldTrainers/{z}/{x}/{y}.png', {
-    tms: false,
-    reuseTiles: true,
-    attribution: 'Maker: <a target="_blank" href="http://www.jaxsonkeenes.com">Jaxson Keenes</a> - Contact: <a target="_blank" href="mailto:jaxsonkeenes@gmail.com">email</a>',
-    bounds: bounds,
-    tileSize: 256
-}).addTo(map);
-
-// Info
-
-var oldtarget;
-
-var OverworldInfo = L.geoJson(OverworldVectorData, {
-    style: style,
-    onEachFeature: onEachFeature
-});
-
-// Markers
-
-var OverworldItemLayer = L.layerGroup();
-var OverworldHiddenItemLayer = L.layerGroup();
-var OverworldBerryItemLayer = L.layerGroup();
-var OverworldTMItemLayer = L.layerGroup();
-var OverworldEntranceItemLayer = L.layerGroup();
-var OverworldTrainerLayer = L.layerGroup();
-
-OverworldItemLayer.addTo(map);
-OverworldHiddenItemLayer.addTo(map);
-OverworldBerryItemLayer.addTo(map);
-OverworldTMItemLayer.addTo(map);
-OverworldEntranceItemLayer.addTo(map);
-OverworldTrainerLayer.addTo(map);
-OverworldInfo.addTo(map);
-
 var currentMap = "Overworld";
-
-function Overworldf(e) {
-    map.eachLayer(function(layer) {
-        map.removeLayer(layer);
-    });
-
-    info.update();
-
-    // map location, zoom !!not tile location
-
-    map.options.maxBounds = maxBounds;
-    if (currentMap == "Fiery Path")
-        map.setView([-11, 43], 10);
-    if (currentMap == "Granite Cave")
-        map.setView([-90, 11], 10);
-    if (currentMap == "Jagged Pass")
-        map.setView([-17, 41], 10);
-    if (currentMap == "Meteor Falls")
-        map.setView([-15, 7], 10);
-    if (currentMap == "Mt Chimney")
-        map.setView([-11, 43], 10);
-    if (currentMap == "Mt Pyre")
-        map.setView([-30, 109], 10);
-    if (currentMap == "New Mauville Entrance")
-        map.setView([0, 0], 10);
-    if (currentMap == "New Mauville")
-        map.setView([0, 0], 10);
-    if (currentMap == "Petalburg Woods")
-        map.setView([-55, 4], 10);
-    if (currentMap == "Rusturf Tunnel")
-        map.setView([-33, 27], 10);
-    if (currentMap == "Safari Zone")
-        map.setView([-22, 109], 10);
-    if (currentMap == "Sootopolis")
-        map.setView([-47, 150], 10);
-    if (currentMap == "Victory Road")
-        map.setView([-54, 194], 10);
-    if (currentMap == "Meteor Falls")
-        map.setView([-17, 8], 10);
-    if (currentMap == "Aqua Hideout")
-        map.setView([-19, 137], 10);
-    console.log('Exiting ' + currentMap);
-
-
-    Overworld.addTo(map);
-    OverworldItemLayer.addTo(map);
-    OverworldHiddenItemLayer.addTo(map);
-    OverworldBerryItemLayer.addTo(map);
-    OverworldTMItemLayer.addTo(map);
-    OverworldEntranceItemLayer.addTo(map);
-    OverworldTrainerLayer.addTo(map);
-    OverworldInfo.addTo(map);
-    map.options.minZoom = 2;
-}
 
 //Marker Locations
 
-markerSet(-220, 10.5, "Petalburg Woods", entrance, currentMap);
-markerSet(-224, 32.5, "Petalburg Woods", entrance, currentMap);
-markerSet(-212, 10.5, "Petalburg Woods", entrance, currentMap);
+markerSet(-220, 10.5, "Petalburg Woods", entranceIcon, currentMap);
+markerSet(-224, 32.5, "Petalburg Woods", entranceIcon, currentMap);
+markerSet(-212, 10.5, "Petalburg Woods", entranceIcon, currentMap);
 
-markerSet(-221, 778, "Victory Road", entrance, currentMap);
-markerSet(-207, 778, "Victory Road", entrance, currentMap);
+markerSet(-221, 778, "Victory Road", entranceIcon, currentMap);
+markerSet(-207, 778, "Victory Road", entranceIcon, currentMap);
 
-markerSet(-129, 87, "Rusturf Tunnel", entrance, currentMap);
-markerSet(-131, 105, "Rusturf Tunnel", entrance, currentMap);
-markerSet(-142, 128, "Rusturf Tunnel", entrance, currentMap);
+markerSet(-129, 87, "Rusturf Tunnel", entranceIcon, currentMap);
+markerSet(-131, 105, "Rusturf Tunnel", entranceIcon, currentMap);
+markerSet(-142, 128, "Rusturf Tunnel", entranceIcon, currentMap);
 
-markerSet(-358, 48, "Granite Cave", entrance, currentMap);
+markerSet(-358, 48, "Granite Cave", entranceIcon, currentMap);
 
-markerSet(-56, 171, "Fiery Path", entrance, currentMap);
-markerSet(-30, 182, "Fiery Path", entrance, currentMap);
+markerSet(-56, 171, "Fiery Path", entranceIcon, currentMap);
+markerSet(-30, 182, "Fiery Path", entranceIcon, currentMap);
 
-markerSet(-47, 188.5, "Mt Chimney", entrance, currentMap);
+markerSet(-47, 188.5, "Mt Chimney", entranceIcon, currentMap);
 
-markerSet(-66, 166.5, "Jagged Pass", entrance, currentMap);
+markerSet(-66, 166.5, "Jagged Pass", entranceIcon, currentMap);
 
-markerSet(-63, 48, "Meteor Falls", entrance, currentMap);
-markerSet(-79, 27, "Meteor Falls", entrance, currentMap);
+markerSet(-63, 48, "Meteor Falls", entranceIcon, currentMap);
+markerSet(-79, 27, "Meteor Falls", entranceIcon, currentMap);
 
-markerSet(-129, 442, "Mt Pyre", entrance, currentMap);
+markerSet(-129, 442, "Mt Pyre", entranceIcon, currentMap);
 
-markerSet(-184, 235, "New Mauville Entrance", entrance, currentMap);
+//markerSet(-184, 235, "New Mauville Entrance", entranceIcon, currentMap);
 
-markerSet(-185.5, 602.5, "Sootopolis", entrance, currentMap);
+markerSet(-185.5, 602.5, "Sootopolis", entranceIcon, currentMap);
 
-markerSet(-85, 437, "Safari Zone", entrance, currentMap);
+markerSet(-85, 437, "Safari Zone", entranceIcon, currentMap);
 
-markerSet(-75, 550, "Aqua Hideout", entrance, currentMap);
+markerSet(-75, 550, "Aqua Hideout", entranceIcon, currentMap);
+markerSet(-79, 662, "Shoal Cave", entranceIcon, currentMap);
 
 //
 //Trainers
@@ -172,66 +85,66 @@ markerSet(-322, 19, ["Swimmer Luis", "Carvanha Lv.26", "", "", "", "", "", "$208
 //Hidden Items
 //credit https://www.youtube.com/user/Reksguitarvideos9/videos
 
-markerSet(-261, 51, "Rare Candy", hitemIcon, currentMap);
-markerSet(-254, 16, "Antidote", hitemIcon, currentMap);
-markerSet(-246, 16, "Heart Scale", hitemIcon, currentMap);
-markerSet(-237, 14, "Potion", hitemIcon, currentMap);
-markerSet(-191, 3, "Pokeball", hitemIcon, currentMap);
-markerSet(-188, 7, "Super Potion", hitemIcon, currentMap);
-markerSet(-130, 62, "Super Potion", hitemIcon, currentMap);
-markerSet(-318, 5, "Big Pearl", hitemIcon, currentMap);
-markerSet(-330, 15, "Heart Scale", hitemIcon, currentMap);
-markerSet(-357, 68, "Heart Scale", hitemIcon, currentMap);
-markerSet(-354, 53, "Stardust", hitemIcon, currentMap);
-markerSet(-353, 41, "Pokeball", hitemIcon, currentMap);
-markerSet(-362, 208, "Heart Scale", hitemIcon, currentMap);
-markerSet(-343, 216, "Revive", hitemIcon, currentMap);
-markerSet(-336, 213, "Heart Scale", hitemIcon, currentMap);
-markerSet(-330, 209, "Great Ball", hitemIcon, currentMap);
-markerSet(-340, 228, "Ether", hitemIcon, currentMap);
-markerSet(-325, 233, "Heart Scale", hitemIcon, currentMap);
-markerSet(-227, 237, "Full Heal", hitemIcon, currentMap);
-markerSet(-134, 110, "Blackglasses", hitemIcon, currentMap);
-markerSet(-199, 235, "Revive", hitemIcon, currentMap);
-markerSet(-205, 233, "Great Ball", hitemIcon, currentMap);
-markerSet(-195, 204, "Pokeball", hitemIcon, currentMap);
-markerSet(-159, 143, "Repel", hitemIcon, currentMap);
-markerSet(-5, 122, "TM32 (Double Team)", tmitemIcon, currentMap);
-markerSet(-3, 173, "Nugget", hitemIcon, currentMap);
-markerSet(-15, 82, "Nugget", hitemIcon, currentMap);
-markerSet(-30, 47, "Revive", hitemIcon, currentMap);
-markerSet(-57, 60, "Carbos", hitemIcon, currentMap);
-markerSet(-91, 15, "Heart Scale", hitemIcon, currentMap);
-markerSet(-65, 144, "Ice Heal", hitemIcon, currentMap);
-markerSet(-55, 219, "Protein", hitemIcon, currentMap);
-markerSet(-70, 226, "Stardust", hitemIcon, currentMap);
-markerSet(-66, 235, "Rare Candy", hitemIcon, currentMap);
-markerSet(-374, 178, "Rare Candy", hitemIcon, currentMap);
-markerSet(-154, 252, "Heart Scale", hitemIcon, currentMap);
-markerSet(-153, 271, "Iron", hitemIcon, currentMap);
-markerSet(-120, 306, "Full Heal", hitemIcon, currentMap);
-markerSet(-82, 297, "Calcium", hitemIcon, currentMap);
-markerSet(-63, 318, "Ultra Ball", hitemIcon, currentMap);
-markerSet(-29, 300, "Max Ether", hitemIcon, currentMap);
-markerSet(-1, 369, "Rare Candy", hitemIcon, currentMap);
-markerSet(-11, 391, "Revive", hitemIcon, currentMap);
-markerSet(-42, 384, "Zinc", hitemIcon, currentMap);
-markerSet(-86, 360, "Rare Candy", hitemIcon, currentMap);
-markerSet(-88, 468, "Max Revive", hitemIcon, currentMap);
-markerSet(-85, 472, "Full Heal", hitemIcon, currentMap);
-markerSet(-83, 458, "Nugget", hitemIcon, currentMap);
-markerSet(-90, 423, "HP UP", hitemIcon, currentMap);
-markerSet(-101, 516, "Heart Scale", hitemIcon, currentMap);
-markerSet(-101, 544, "Pokeball", hitemIcon, currentMap);
-markerSet(-77, 541, "PP UP", hitemIcon, currentMap);
-markerSet(-155, 459, "PP UP", hitemIcon, currentMap);
-markerSet(-158, 458, "Rare Candy", hitemIcon, currentMap);
-markerSet(-155, 411, "Hyper Potion", hitemIcon, currentMap);
-markerSet(-141, 395, "Super Repel", hitemIcon, currentMap);
-markerSet(-141, 332, "Revive", hitemIcon, currentMap);
-markerSet(-241, 697, "Heart Scale", hitemIcon, currentMap);
-markerSet(-229, 689, "Heart Scale", hitemIcon, currentMap);
-markerSet(-253, 671, "Heart Scale", hitemIcon, currentMap);
+markerSet(-261, 51, "Rare Candy", hiddenIcon, currentMap);
+markerSet(-254, 16, "Antidote", hiddenIcon, currentMap);
+markerSet(-246, 16, "Heart Scale", hiddenIcon, currentMap);
+markerSet(-237, 14, "Potion", hiddenIcon, currentMap);
+markerSet(-191, 3, "Pokeball", hiddenIcon, currentMap);
+markerSet(-188, 7, "Super Potion", hiddenIcon, currentMap);
+markerSet(-130, 62, "Super Potion", hiddenIcon, currentMap);
+markerSet(-318, 5, "Big Pearl", hiddenIcon, currentMap);
+markerSet(-330, 15, "Heart Scale", hiddenIcon, currentMap);
+markerSet(-357, 68, "Heart Scale", hiddenIcon, currentMap);
+markerSet(-354, 53, "Stardust", hiddenIcon, currentMap);
+markerSet(-353, 41, "Pokeball", hiddenIcon, currentMap);
+markerSet(-362, 208, "Heart Scale", hiddenIcon, currentMap);
+markerSet(-343, 216, "Revive", hiddenIcon, currentMap);
+markerSet(-336, 213, "Heart Scale", hiddenIcon, currentMap);
+markerSet(-330, 209, "Great Ball", hiddenIcon, currentMap);
+markerSet(-340, 228, "Ether", hiddenIcon, currentMap);
+markerSet(-325, 233, "Heart Scale", hiddenIcon, currentMap);
+markerSet(-227, 237, "Full Heal", hiddenIcon, currentMap);
+markerSet(-134, 110, "Blackglasses", hiddenIcon, currentMap);
+markerSet(-199, 235, "Revive", hiddenIcon, currentMap);
+markerSet(-205, 233, "Great Ball", hiddenIcon, currentMap);
+markerSet(-195, 204, "Pokeball", hiddenIcon, currentMap);
+markerSet(-159, 143, "Repel", hiddenIcon, currentMap);
+markerSet(-5, 122, "TM32 (Double Team)", tmIcon, currentMap);
+markerSet(-3, 173, "Nugget", hiddenIcon, currentMap);
+markerSet(-15, 82, "Nugget", hiddenIcon, currentMap);
+markerSet(-30, 47, "Revive", hiddenIcon, currentMap);
+markerSet(-57, 60, "Carbos", hiddenIcon, currentMap);
+markerSet(-91, 15, "Heart Scale", hiddenIcon, currentMap);
+markerSet(-65, 144, "Ice Heal", hiddenIcon, currentMap);
+markerSet(-55, 219, "Protein", hiddenIcon, currentMap);
+markerSet(-70, 226, "Stardust", hiddenIcon, currentMap);
+markerSet(-66, 235, "Rare Candy", hiddenIcon, currentMap);
+markerSet(-374, 178, "Rare Candy", hiddenIcon, currentMap);
+markerSet(-154, 252, "Heart Scale", hiddenIcon, currentMap);
+markerSet(-153, 271, "Iron", hiddenIcon, currentMap);
+markerSet(-120, 306, "Full Heal", hiddenIcon, currentMap);
+markerSet(-82, 297, "Calcium", hiddenIcon, currentMap);
+markerSet(-63, 318, "Ultra Ball", hiddenIcon, currentMap);
+markerSet(-29, 300, "Max Ether", hiddenIcon, currentMap);
+markerSet(-1, 369, "Rare Candy", hiddenIcon, currentMap);
+markerSet(-11, 391, "Revive", hiddenIcon, currentMap);
+markerSet(-42, 384, "Zinc", hiddenIcon, currentMap);
+markerSet(-86, 360, "Rare Candy", hiddenIcon, currentMap);
+markerSet(-88, 468, "Max Revive", hiddenIcon, currentMap);
+markerSet(-85, 472, "Full Heal", hiddenIcon, currentMap);
+markerSet(-83, 458, "Nugget", hiddenIcon, currentMap);
+markerSet(-90, 423, "HP UP", hiddenIcon, currentMap);
+markerSet(-101, 516, "Heart Scale", hiddenIcon, currentMap);
+markerSet(-101, 544, "Pokeball", hiddenIcon, currentMap);
+markerSet(-77, 541, "PP UP", hiddenIcon, currentMap);
+markerSet(-155, 459, "PP UP", hiddenIcon, currentMap);
+markerSet(-158, 458, "Rare Candy", hiddenIcon, currentMap);
+markerSet(-155, 411, "Hyper Potion", hiddenIcon, currentMap);
+markerSet(-141, 395, "Super Repel", hiddenIcon, currentMap);
+markerSet(-141, 332, "Revive", hiddenIcon, currentMap);
+markerSet(-241, 697, "Heart Scale", hiddenIcon, currentMap);
+markerSet(-229, 689, "Heart Scale", hiddenIcon, currentMap);
+markerSet(-253, 671, "Heart Scale", hiddenIcon, currentMap);
 
 
 
@@ -251,7 +164,7 @@ markerSet(-102, 20, "Super Potion", itemIcon, currentMap);
 markerSet(-109, 26, "PP UP", itemIcon, currentMap);
 markerSet(-98, 31, "Great Ball", itemIcon, currentMap);
 markerSet(-71, 23, "Iron", itemIcon, currentMap);
-markerSet(-49, 18, "TM01 (Focus Punch)", tmitemIcon, currentMap);
+markerSet(-49, 18, "TM01 (Focus Punch)", tmIcon, currentMap);
 markerSet(-56, 12, "Heal Powder", itemIcon, currentMap);
 markerSet(-37, 51, "Protein", itemIcon, currentMap);
 markerSet(-19, 71, "EnergyPowder", itemIcon, currentMap);
@@ -260,14 +173,14 @@ markerSet(-7, 153, "Max Ether", itemIcon, currentMap);
 markerSet(-5, 179, "Super Repel", itemIcon, currentMap);
 markerSet(-63, 174, "Nugget", itemIcon, currentMap);
 markerSet(-54, 212, "Stardust", itemIcon, currentMap);
-markerSet(-104, 233, "TM37 (Sandstorm)", tmitemIcon, currentMap);
+markerSet(-104, 233, "TM37 (Sandstorm)", tmIcon, currentMap);
 markerSet(-114, 203, "HP UP", itemIcon, currentMap);
 markerSet(-118, 219, "Elixir", itemIcon, currentMap);
 markerSet(-159, 156, "Great Ball", itemIcon, currentMap);
 markerSet(-142, 149, "Revive", itemIcon, currentMap);
 markerSet(-159, 228, "X Speed", itemIcon, currentMap);
 markerSet(-227, 184, "PP UP", itemIcon, currentMap);
-markerSet(-226, 194, "Guard Spec", itemIcon, currentMap);
+markerSet(-225, 170, "Guard Spec", itemIcon, currentMap);
 markerSet(-229, 230, "Dire Hit", itemIcon, currentMap);
 markerSet(-207, 226, "Rare Candy", itemIcon, currentMap);
 markerSet(-198, 206, "Elixir", itemIcon, currentMap);
@@ -312,6 +225,33 @@ markerSet(-272, 405, "Rare Candy", itemIcon, currentMap);
 markerSet(-270, 328, "Star Piece", itemIcon, currentMap);
 markerSet(-288, 368, "Max Revive", itemIcon, currentMap);
 markerSet(-287, 262, "Star Piece", itemIcon, currentMap);
+
+
+//TM's from NPCs
+
+markerSet(-106, 678, "TM04 (Calm Mind), Defeat Tate & Liza", tmIcon, currentMap);
+markerSet(-12, 59, "TM05 (Roar), Defeat man with Poochyena", tmIcon, currentMap);
+markerSet(-376, 68, "TM08 (Bulk Up), Defeat Brawly", tmIcon, currentMap);
+markerSet(-208, 5, "TM09 (Bullet Seed), Talk to boy", tmIcon, currentMap);
+markerSet(-3, 337, "TM10 (Hidden Power), Talk to old woman (Answers Right Right Left)", tmIcon, currentMap);
+markerSet(-149, 338, "TM19 (Giga Drain), Show girl Grass type Pokemon", tmIcon, currentMap);
+markerSet(-282, 482.5, "TM21 (Frustration), Show boy Pokemon with low friendship (One TM per week)", tmIcon, currentMap);
+markerSet(-282, 483.5, "TM27 (Return), Show boy Pokemon with high friendship (One TM per week)", tmIcon, currentMap);
+markerSet(-149, 228, "TM24 (Thunderbolt), from Wattson after shutting down generator", tmIcon, currentMap);
+markerSet(-5, 69, "TM28 (Dig), Talk to boy", tmIcon, currentMap);
+markerSet(-142, 208, "TM34 (Shock Wave), Defeat Wattson", tmIcon, currentMap);
+markerSet(-365, 63, "TM36 (Sludge Bomb), Talk to Collector after defeating Norman(5th Gym)", tmIcon, currentMap);
+
+markerSet(-138, 27, "TM39 (Rock Tomb), Defeat Roxanne", tmIcon, currentMap);
+markerSet(-8, 342, "TM40 (Aerial Ace), Defeat Winona", tmIcon, currentMap);
+markerSet(-272, 210, "TM41 (Torment), Talk to Sailor", tmIcon, currentMap);
+markerSet(-237, 55, "TM42 (Facade), Defeat Norman", tmIcon, currentMap);
+markerSet(-20, 213, "TM43 (Secret Power), Talk to boy", tmIcon, currentMap);
+markerSet(-85, 535, "TM44 (Rest), Talk to man", tmIcon, currentMap);
+markerSet(-20, 213, "TM45 (Attract), Talk to woman", tmIcon, currentMap);
+markerSet(-286, 230.5, "TM46 (Thief), Defeat Team Magma Grunt", tmIcon, currentMap);
+
+
 
 
 markerSet(-72, 588, "Red Shard", itemIcon, currentMap);

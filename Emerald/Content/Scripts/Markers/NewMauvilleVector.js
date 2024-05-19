@@ -1,4 +1,4 @@
-var NewMauvilleVectorData = {
+var NewMauvilleVector = {
     "type": "FeatureCollection",
     "features": [{
             "type": "Feature",

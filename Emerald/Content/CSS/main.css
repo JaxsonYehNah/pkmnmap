@@ -15,6 +15,20 @@ body,
     margin-left: 10px;
 }
 
+#returnToHome {
+    position: absolute;
+    display: flex;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    margin: 10px;
+    padding: 6px 8px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 15px rgb(0 0 0 / 20%);
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+}
+
 #controlscon {
     position: absolute;
     display: flex;
@@ -27,6 +41,17 @@ body,
     box-shadow: 0 0 15px rgb(0 0 0 / 20%);
     border-radius: 5px;
     transition: all 0.3s ease-in-out;
+}     
+
+.home-button {
+    padding: 5px;
+    font: 1em Arial, Helvetica, sans-serif;
+    color: #282c34;
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
 }
 
 #menu-access {
@@ -162,10 +187,19 @@ body,
     height: 30px;
 }
 
+
+   
+
 @media only screen and (max-height: 900px) {
     .pkmn-list-column img {
         width: 20px;
         height: 20px;
+    }
+    .info {
+        font-size: 12px;
+    }
+    .pkmn-list-column {
+        padding: 0px 5px
     }
 }
 
@@ -174,11 +208,17 @@ body,
         width: 15px;
         height: 15px;
     }
+    .info {
+        font-size: 11px;
+    }
 }
 
 @media only screen and (max-height: 650px) {
     .pkmn-list-column img {
         width: 12px;
         height: 12px;
+    }
+    .info {
+        font-size: 10px;
     }
 }

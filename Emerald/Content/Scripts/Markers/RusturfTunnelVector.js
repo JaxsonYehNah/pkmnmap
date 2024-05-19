@@ -1,4 +1,4 @@
-var RusturfTunnelVectorData = {
+var RusturfTunnelVector = {
     "type": "FeatureCollection",
     "features": [{
         "type": "Feature",

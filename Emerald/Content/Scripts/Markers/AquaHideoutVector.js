@@ -1,4 +1,4 @@
-var AquaHideoutVectorData = {
+var AquaHideoutVector = {
     "type": "FeatureCollection",
     "features": [{
             "type": "Feature",

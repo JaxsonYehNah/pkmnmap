@@ -1,4 +1,4 @@
-var PetalburgWoodsVectorData = {
+var PetalburgWoodsVector = {
     "type": "FeatureCollection",
     "features": [{
         "type": "Feature",

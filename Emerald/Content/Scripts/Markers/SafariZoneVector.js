@@ -1,4 +1,4 @@
-var SafariZoneVectorData = {
+var SafariZoneVector = {
     "type": "FeatureCollection",
     "features": [{
             "type": "Feature",

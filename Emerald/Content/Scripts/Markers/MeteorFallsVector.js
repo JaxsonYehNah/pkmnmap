@@ -1,4 +1,4 @@
-var MeteorFallsVectorData = {
+var MeteorFallsVector = {
     "type": "FeatureCollection",
     "features": [{
             "type": "Feature",

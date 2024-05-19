@@ -1,59 +1,23 @@
-var MtPyre = L.tileLayer('Tilesets/MtPyre/{z}/{x}/{y}.png', {
-    tms: false,
-    reuseTiles: true,
-    attribution: 'Maker: <a target="_blank" href="http://www.jaxsonkeenes.com">Jaxson Keenes</a> - Contact: <a target="_blank" href="mailto:jaxsonkeenes@gmail.com">email</a>',
-    bounds: bounds,
-    tileSize: 256
-});
-
-var MtPyreInfo = L.geoJson(MtPyreVectorData, {
-    style: style,
-    onEachFeature: onEachFeature
-});
-
-var MtPyreItemLayer = L.layerGroup();
-var MtPyreHiddenItemLayer = L.layerGroup();
-var MtPyreBerryItemLayer = L.layerGroup();
-var MtPyreTMItemLayer = L.layerGroup();
-var MtPyreEntranceItemLayer = L.layerGroup();
-
 var currentMap = "Mt Pyre";
 
-function MtPyref(e) {
 
-    map.eachLayer(function(layer) {
-        map.removeLayer(layer);
-    });
-
-    info.update();
-
-    map.setView([-48, 100], 5);
-
-    MtPyre.addTo(map);
-    MtPyreInfo.addTo(map);
-    MtPyreItemLayer.addTo(map);
-    MtPyreHiddenItemLayer.addTo(map);
-    MtPyreTMItemLayer.addTo(map);
-    MtPyreEntranceItemLayer.addTo(map);
-
-    currentMap = "Mt Pyre";
-
-    console.log(e.target.name);
-    map.options.minZoom = 5;
-
-    var dif = 20;
-
-    var swview = [(-48 - dif), (97 - dif)];
-    var neview = [(-48 + dif), (97 + dif)];
-
-    map.options.maxBounds = L.latLngBounds(swview, neview);
-}
-
-markerSet(-238, 414, "Overworld", entrance, currentMap);
-markerSet(-238, 415, "Overworld", entrance, currentMap);
+markerSet(-238, 414, "Overworld", entranceIcon, currentMap);
+markerSet(-238, 415, "Overworld", entranceIcon, currentMap);
 
 
-markerSet(-210, 375, "Max Ether", hitemIcon, currentMap);
-markerSet(-196, 368, "Ultra Ball", hitemIcon, currentMap);
-markerSet(-175, 364, "Zinc", hitemIcon, currentMap);
-markerSet(-157, 392, "Rare Candy", hitemIcon, currentMap);
+markerSet(-210, 375, "Max Ether", hiddenIcon, currentMap);
+markerSet(-196, 368, "Ultra Ball", hiddenIcon, currentMap);
+markerSet(-175, 364, "Zinc", hiddenIcon, currentMap);
+markerSet(-157, 392, "Rare Candy", hiddenIcon, currentMap);
+
+markerSet(-203, 386, "Max Potion", itemIcon, currentMap);
+markerSet(-228, 378, "TM48 (Skill Swap)	", tmIcon, currentMap);
+
+markerSet(-159, 412, "TM30 (Shadow Ball)", tmIcon, currentMap);
+markerSet(-222, 418, "Cleanse Tag, Talk to lady", itemIcon, currentMap);
+markerSet(-216, 406, "Ultra Ball", itemIcon, currentMap);
+markerSet(-199, 406, "Super Repel", itemIcon, currentMap);
+markerSet(-189, 409, "Sea Incense", itemIcon, currentMap);
+markerSet(-175, 412, "Lax Incense", itemIcon, currentMap);
+
+markerSet(-153, 378, "Magma Emblem, From old lady after confronting Team Aqua", itemIcon, currentMap);

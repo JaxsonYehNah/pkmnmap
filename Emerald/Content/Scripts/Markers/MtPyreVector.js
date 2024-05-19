@@ -1,4 +1,4 @@
-var MtPyreVectorData = {
+var MtPyreVector = {
     "type": "FeatureCollection",
     "features": [{
             "type": "Feature",

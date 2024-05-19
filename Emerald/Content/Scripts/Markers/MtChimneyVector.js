@@ -1,4 +1,4 @@
-var MtChimneyVectorData = {
+var MtChimneyVector = {
     "type": "FeatureCollection",
     "features": [{
         "type": "Feature",

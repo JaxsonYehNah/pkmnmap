@@ -1,4 +1,4 @@
-var GraniteCaveVectorData = {
+var GraniteCaveVector = {
     "type": "FeatureCollection",
     "features": [{
             "type": "Feature",

@@ -1,4 +1,4 @@
-var FieryPathVectorData = {
+var FieryPathVector = {
     "type": "FeatureCollection",
     "features": [{
         "type": "Feature",

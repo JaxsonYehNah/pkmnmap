@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>Pokémon Emerald Interactive Map</title>
     <meta name="description" content="An Interactive Map for Pokémon Emerald, featuring Item & Berry Locations">
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
     <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
     <link rel="stylesheet" href="Content/Leaflet/leaflet.css" />
     <link rel="stylesheet" href="Content/CSS/main.css" />
@@ -26,51 +26,54 @@
                 <button onclick="toggleUnderwater()">Toggle Underwater</button>
             </div>
         </div>
+        <div id="returnToHome">
+            
+    <a href="../" class="home-button"><img src="Content/Images/home_icon.svg" alt="Return to Home"></a>
+        </div>
     </div>
 
 
 
     <!-- Map Scripts -->
-    <div>
         <script src="Content/Leaflet/leaflet.js"></script>
-        <script src="Content/Scripts/main.js"></script>
+        <script src="Content/Scripts/functions.js"></script>
+        <script src="Content/Scripts/Markers/OverworldVector.js"></script>
+        <script src="Content/Scripts/Markers/AquaHideoutVector.js"></script>
         <script src="Content/Scripts/Markers/FieryPathVector.js"></script>
         <script src="Content/Scripts/Markers/GraniteCaveVector.js"></script>
         <script src="Content/Scripts/Markers/JaggedPassVector.js"></script>
+        <script src="Content/Scripts/Markers/MagmaHideoutVector.js"></script>
         <script src="Content/Scripts/Markers/MeteorFallsVector.js"></script>
         <script src="Content/Scripts/Markers/MtChimneyVector.js"></script>
-        <script src="Content/Scripts/Markers/MagmaHideoutVector.js"></script>
         <script src="Content/Scripts/Markers/MtPyreVector.js"></script>
         <script src="Content/Scripts/Markers/NewMauvilleVector.js"></script>
-        <script src="Content/Scripts/Markers/NewMauvilleEntranceVector.js"></script>
-        <script src="Content/Scripts/Markers/OverworldVector.js"></script>
         <script src="Content/Scripts/Markers/PetalburgWoodsVector.js"></script>
         <script src="Content/Scripts/Markers/RusturfTunnelVector.js"></script>
+        <script src="Content/Scripts/Markers/SafariZoneVector.js"></script>
+        <script src="Content/Scripts/Markers/ShoalCaveVector.js"></script>
         <script src="Content/Scripts/Markers/SootopolisVector.js"></script>
         <script src="Content/Scripts/Markers/UnderwaterVector.js"></script>
         <script src="Content/Scripts/Markers/VictoryRoadVector.js"></script>
-        <script src="Content/Scripts/Markers/SafariZoneVector.js"></script>
-        <script src="Content/Scripts/Markers/AquaHideoutVector.js"></script>
         <script src="Content/Scripts/markers.js"></script>
+        <script src="Content/Scripts/maps.js"></script>
         <script src="Content/Scripts/Markers/Overworld.js"></script>
-        <script src="Content/Scripts/Markers/PetalburgWoods.js"></script>
-        <script src="Content/Scripts/Markers/VictoryRoad.js"></script>
-        <script src="Content/Scripts/Markers/RusturfTunnel.js"></script>
-        <script src="Content/Scripts/Markers/GraniteCave.js"></script>
+        <script src="Content/Scripts/Markers/AquaHideout.js"></script>
         <script src="Content/Scripts/Markers/FieryPath.js"></script>
+        <script src="Content/Scripts/Markers/GraniteCave.js"></script>
         <script src="Content/Scripts/Markers/JaggedPass.js"></script>
-        <script src="Content/Scripts/Markers/MtChimney.js"></script>
         <script src="Content/Scripts/Markers/MagmaHideout.js"></script>
         <script src="Content/Scripts/Markers/MeteorFalls.js"></script>
+        <script src="Content/Scripts/Markers/MtChimney.js"></script>
         <script src="Content/Scripts/Markers/MtPyre.js"></script>
         <script src="Content/Scripts/Markers/NewMauville.js"></script>
-        <script src="Content/Scripts/Markers/NewMauvilleEntrance.js"></script>
+        <script src="Content/Scripts/Markers/PetalburgWoods.js"></script>
+        <script src="Content/Scripts/Markers/RusturfTunnel.js"></script>
+        <script src="Content/Scripts/Markers/SafariZone.js"></script>
+        <script src="Content/Scripts/Markers/ShoalCave.js"></script>
         <script src="Content/Scripts/Markers/Sootopolis.js"></script>
         <script src="Content/Scripts/Markers/Underwater.js"></script>
-        <script src="Content/Scripts/Markers/SafariZone.js"></script>
-        <script src="Content/Scripts/Markers/AquaHideout.js"></script>
-        <script src="Content/Scripts/functions.js"></script>
-    </div>
+        <script src="Content/Scripts/Markers/VictoryRoad.js"></script>
+        <script src="Content/Scripts/main.js"></script>
 </body>
 
 <!-- Analytics -->

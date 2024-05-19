@@ -1,4 +1,4 @@
-var UnderwaterVectorData = {
+var UnderwaterVector = {
     "type": "FeatureCollection",
     "features": [{
             "type": "Feature",
